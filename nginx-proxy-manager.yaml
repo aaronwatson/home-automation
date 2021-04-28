@@ -29,6 +29,7 @@ services:
       - npm_network
       - npm-bridge
 #        ipv4_address: 192.168.1.193
+    dns: 8.8.8.8
     depends_on:
       - npm-db
   npm-db:
@@ -45,6 +46,7 @@ services:
       - npm_network
       - npm-bridge
 #        ip4v_address: 192.168.1.194
+    dns: 8.8.8.8
 networks:
   npm_network:
     external: true
