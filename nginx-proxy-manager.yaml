@@ -45,3 +45,8 @@ services:
       - npm_network
       - npm-bridge
 #        ip4v_address: 192.168.1.194
+networks:
+  npm_network:
+    external: true
+  npm-bridge:
+    external: true
