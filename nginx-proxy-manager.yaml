@@ -26,8 +26,8 @@ services:
       - /docker/nginx-proxy/data:/data
       - /docker/nginx-proxy/letsencrypt:/etc/letsencrypt
     networks:
-      npm-network:
-        ipv4_address: 192.168.1.193
+      - npm-network
+#        ipv4_address: 192.168.1.193
     depends_on:
       - npm-db
   npm-db:
@@ -41,5 +41,5 @@ services:
     volumes:
       - /docker/nginx-proxy/mariadb:/var/lib/mysql
     networks:
-      npm-network:
-        ip4v_address: 192.168.1.194
+      - npm-network
+#        ip4v_address: 192.168.1.194
