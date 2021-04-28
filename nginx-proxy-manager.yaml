@@ -23,8 +23,8 @@ services:
       # Uncomment this if IPv6 is not enabled on your host
       # DISABLE_IPV6: 'true'
     volumes:
-      - /docker/nginx-proxy/data:/data
-      - /docker/nginx-proxy/letsencrypt:/etc/letsencrypt
+      - ./docker/nginx-proxy/data:/data
+      - ./docker/nginx-proxy/letsencrypt:/etc/letsencrypt
     networks:
       - npm_network
       - npm-bridge
@@ -40,7 +40,7 @@ services:
       MYSQL_USER: 'npm'
       MYSQL_PASSWORD: 'npm'
     volumes:
-      - /docker/nginx-proxy/mariadb:/var/lib/mysql
+      - ./docker/nginx-proxy/mariadb:/var/lib/mysql
     networks:
       - npm_network
       - npm-bridge
